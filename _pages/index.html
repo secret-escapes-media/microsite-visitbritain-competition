@@ -1,0 +1,61 @@
+---
+layout: page
+id: overview
+nav: true
+nav-order: 1
+title: Britain's Secrets
+
+banner:
+  content: >
+    <div class="container container--xxl text--center">
+      <h1 class="h h--xl">Win the Best of British</h1>
+      <p class="p--xxxl">
+        Six irresistible staycations await. For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, find your perfect getaway here.
+      </p>
+      <div class="space--sm"></div>
+      <a href="{{site.baseurl}}/competition" class="btn">Enter now</a>
+    </div>
+
+
+prizes:
+
+  - id: prize
+    prize-title: For beach lovers
+    location: Cornwall
+    title: Carbis Bay Hotel & Estate, Cornwall
+    description: Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.
+
+
+
+---
+
+<div class="container">
+  {% for prize in page.prizes%}
+  <div class="bob{% cycle '', ' bob--swap' %}">
+    <div class="bob__img">
+      <div class="img img--21-9 bg--black theme--dark">
+        <div class="img__content">{{prize.prize-title}}</div>
+      </div>
+      <div class="img img--21-9" style="background-image: url('{{site.img}}/img.jpg');"></div>
+    </div>
+
+    <div class="bob__text">
+      <div class="boxpad--md">
+        <img class="prize__location" src="{{site.img}}/icons/location-wh.svg" alt="" width="30">
+        <div class="text--smallcaps p--lg">{{prize.location}}</div>
+        <div class="space--sm"></div>
+        <div class="h h--xs">{{prize.title}}</div>
+        <div class="space--xxs"></div>
+        <p>{{prize.description}}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+
+  <div class="space--xl"></div>
+  <a href="{{site.baseurl}}/competition" class="btn">Enter now</a>
+  <div class="space--xxxl"></div>
+
+</div>
+

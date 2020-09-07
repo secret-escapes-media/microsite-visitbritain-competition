@@ -1,0 +1,14 @@
+// general styles for the project that wouldn't be a reuseable component
+
+.prize {
+  overflow: visible;
+  margin-left: $s2;
+  margin-right: $s2;
+  &__hotel {
+    margin-left: -$s2;
+    margin-right: -$s2;
+  }
+  &__location {
+    width: 20px;
+  }
+}

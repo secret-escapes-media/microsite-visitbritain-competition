@@ -1,0 +1,21 @@
+// general modifier styles for text
+
+.p {
+  // sizes
+  &--xxxxl { font-size: 1.2rem; }
+  &--xxxl { font-size: 1.2rem; }
+  &--xxl { font-size: 1.1rem; }
+  &--xl  { font-size: 1.05rem; }
+  &--lg  { font-size: 1rem; }
+  &--sm  { font-size: .9rem; }
+  &--xs  { font-size: .8rem; }
+  @include bp($lg){
+    &--xxxxl { font-size: 1.4rem; }
+    &--xxxl { font-size: 1.3rem; }
+    &--xxl { font-size: 1.2rem; }
+    &--xl  { font-size: 1.1rem; }
+    &--lg  { font-size: 1.05rem; }
+    &--sm  { font-size: .9rem; }
+    &--xs  { font-size: .8rem; }
+  }
+}

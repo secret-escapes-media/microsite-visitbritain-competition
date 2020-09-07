@@ -1,0 +1,74 @@
+---
+layout: competition
+id: competition
+nav: true
+nav-order: 2
+nav-title: Competition
+
+title: Win the Best of British
+
+
+questions:
+  types:
+    - type: Beach
+    - type: Country
+    - type: City
+    - type: Retreat
+    - type: In nature
+    - type: Wild coast
+  who:
+    - who: Whole family
+    - who: Partner & kids
+    - who: Friends
+    - who: On my own
+  locations:
+    - country: England
+    - country: Wales
+
+
+
+
+
+
+
+competition-form:
+  id: comp
+  post-url: "#getFormUrl"
+  expiry-date: 2050-01-01
+  fields:
+    - id: name
+      type: text
+      label: Name
+      required: true
+    - id: email
+      type: email
+      label: Email
+      required: true
+    - id: qualify
+      type: radio
+      label: Are you a UK resident and over the age of 18?
+      required: true
+      options:
+        - id: qualify-true
+          label: 'Yes'
+          value: 'yes'
+        - id: qualify-false
+          label: 'No'
+          value: 'no'
+          invalid: true
+    - id: opt-in
+      type: radio
+      label: Would you like to receive emails from our Partner brand?
+      required: true
+      options:
+        - id: opt-in-true
+          label: 'Yes'
+          value: 'yes'
+        - id: opt-in-false
+          label: 'No'
+          value: 'no'
+  submit: Submit Entry
+  terms: >
+    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
+---
+
