@@ -3,33 +3,26 @@ layout: default
 ---
 
 {% include nav/header.html %}
-{% include nav/site.html %}
+{% include page/competition-banner.html %}
 
 
 
-<div class="vpad--xxl">
+<div class="bg--grey-darkest theme--dark">
 
-  <div class="container container--xxl text--center">
-    <div class="h h--xxl">{{page.title}}</div>
-    <div class="space--sm"></div>
-    <p class="p--xxl">{{page.intro}}</p>
+  <div class="container text--center">
 
-    <div class="vpad--xl">
-      <hr class="hr--center">
-    </div>
-
-    <div class="text--center question" id="question-1">
-      <div class="p--xxl text--smallcaps">Step 1</div>
-      <div class="h h--sm">What type of holiday do you want most right now?</div>
-      <div class="space--lg"></div>
+    <div class="question is-current" id="question-1">
+      <div class="p--xxl text--smallcaps">Question 1</div>
+      <div class="h h--sm">{{page.holiday-types.question}}</div>
+      <div class="space--xl"></div>
       <div class="row">
-        {% for option in page.questions.types %}
+        {% for option in page.holiday-types.options %}
         <div class="col col--4">
-          <div class="img img--1-1" style="background-image: url({{site.img}}/img.jpg);">
-            <a href="javascript:void(0);" class="img__link js-question-1"></a>
+          <div class="img img--4-3 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/competition/types/{{option.id}}.jpg);">
+            <a href="javascript:void(0);" class="img__link js-question-1" data-answer="{{option.id}}" data-category="{{option.category}}"></a>
             <div class="img__content">
               <div class="boxpad__sm">
-                <div class="h h--xxs">{{option.type}}</div>
+                <div class="h h--md h--display">{{option.name}}</div>
               </div>
             </div>
           </div>
@@ -38,18 +31,18 @@ layout: default
       </div>
     </div>
 
-    <div class="text--center question" id="question-2" style="display: none;">
-      <div class="p--xxl text--smallcaps">Step 2</div>
-      <div class="h h--sm">Who do you want to escape with?</div>
+    <div class="question" id="question-2" style="display: none;">
+      <div class="p--xxl text--smallcaps">Question 2</div>
+      <div class="h h--sm">{{page.who.question}}</div>
       <div class="space--lg"></div>
       <div class="row">
-        {% for who in page.questions.who %}
+        {% for option in page.who.options %}
         <div class="col col--3">
-          <div class="img img--1-1" style="background-image: url({{site.img}}/img.jpg);">
-            <a href="javascript:void(0);" class="img__link js-question-2"></a>
+          <div class="img img--1-1 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/competition/who/{{option.id}}.jpg);">
+            <a href="javascript:void(0);" class="img__link js-question-2" data-answer="{{option.id}}"></a>
             <div class="img__content">
               <div class="boxpad__sm">
-                <div class="h h--xxs">{{who.who}}</div>
+                <div class="h h--md h--display">{{option.name}}</div>
               </div>
             </div>
           </div>
@@ -58,18 +51,18 @@ layout: default
       </div>
     </div>
 
-    <div class="text--center question" id="question-3" style="display: none;">
-      <div class="p--xxl text--smallcaps">Step 3</div>
-      <div class="h h--sm">Decisions, decisions... Where would you rather go?</div>
+    <div class="question" id="question-3" style="display: none;">
+      <div class="p--xxl text--smallcaps">Question 3</div>
+      <div class="h h--sm">{{page.locations.question}}</div>
       <div class="space--lg"></div>
       <div class="row">
-        {% for location in page.questions.locations %}
-        <div class="col col--6">
-          <div class="img img--16-9" style="background-image: url({{site.img}}/img.jpg);">
-            <a href="javascript:void(0);" class="img__link js-question-3"></a>
+        {% for option in page.locations.options %}
+        <div class="col col--6" id="question-location-{{option.id}}">
+          <div class="img img--16-9 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/competition/locations/{{option.id}}.jpg);">
+            <a href="javascript:void(0);" class="img__link js-question-3" data-answer="{{option.id}}"></a>
             <div class="img__content">
               <div class="boxpad__sm">
-                <div class="h h--xxs">{{location.country}}</div>
+                <div class="h h--md h--display">{{option.name}}</div>
               </div>
             </div>
           </div>
@@ -78,95 +71,93 @@ layout: default
       </div>
     </div>
 
-    <div class="text--center question" id="question-4" style="display: none;">
 
-      <div class="p--xl text--smallcaps">Your result:</div>
-      <div class="h h--md">Cornwall</div>
-      <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-      <div class="space--sm"></div>
-      <a href="#entry-form" class="btn">Complete your entry</a>
+    {% for result in page.results %}
+    <div id="result-{{result.id}}" style="display: none;">
+
+      <div class="width width--xl ">
+        <div class="p--xl text--smallcaps">Your result:</div>
+        <div class="h h--xxl h--display">{{result.title}}</div>
+        <p class="p--xxl">Here’s your top recommendation with a few unique ideas thrown in. Don't forget to enter below to be in with a chance of winning this break!</p>
+        <div class="space--sm"></div>
+        <a href="#complete-entry" class="btn">Complete your entry</a>
+        <div class="space--xxl"></div>
+      </div>
+
+      <div class="depth--sm bg--white rounded--sm theme--light text--left row row--valign-center row--no-gutters">
+        <div class="col col--6">
+          <div class="img img--4-3" style="background-image: url({{site.img}}/pages/competition/prizes/{{result.id}}/hotel.jpg);"></div>
+        </div>
+        <div class="col col--6">
+          <div class="boxpad--md">
+            <div class="location text--smallcaps p--xl">{{result.hotel.location}}</div>
+            <div class="space--xs"></div>
+            <h3 class="h h--sm text--bold">{{result.hotel.name}}</h3>
+            <div class="space--xxs"></div>
+            <p>{{result.hotel.description}}</p>
+          </div>
+        </div>
+      </div>
       <div class="space--lg"></div>
 
       <div class="row">
-
+        {% for tip in result.tips %}
         <div class="col col--6">
-          <div class="offer depth--sm depth--sm-hover rounded--sm">
-            <div class="img img--16-9" style="background-image: url(https://secretescapes-web.imgix.net/hotels/242/c0bc5c54_f351_4371_bb32_d0cdab3de4f8.jpg);"></div>
+          <div class="rounded--md depth--sm bg--white theme--light">
+            <div class="img img--21-9" style="background-image: url({{site.img}}/pages/competition/prizes/{{result.id}}/{{tip.id}}.jpg);"></div>
             <div class="boxpad--md">
-              <div class="offer__location">Carbis Bay Hotel & Estate, Cornwall</div>
-              <h3 class="offer__title">Luxurious St Ives beach escape with stunning sea views - Fully refundable</h3>
-              <div class="space--xxs"></div>
-              <div class="offer__description">Offering breezy coastal style and a relaxing atmosphere, Carbis Bay Beach is a fully fledged member of the Most Beautiful Bays in the World Organisation. Around two miles from the picturesque town of St Ives, it's also home to Carbis Bay Hotel & Estate, sitting pretty by a Blue Flag beach for almost 120 years</div>
+              <div class="h h--xxs text--bold">{{tip.name}}</div>
+              <p>{{tip.description}}</p>
             </div>
           </div>
         </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
 
-        <div class="col col--6">
 
-          <div class="rounded--md depth--sm bg--white">
-            <div class="img img--21-9" style="background-image: url({{site.img}}/img.jpg);"></div>
-            <div class="boxpad--md">
-              <div class="h h--xxs">Secret tip</div>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet.</p>
-            </div>
+    <!-- Form -->
+    <div class="vpad--xxl" id="complete-entry" style="display: none;">
+      <div class="h h--sm text--center">Now complete your entry to be in to win your perfect escape</div>
+      <div class="space--lg"></div>
+      <div id="entry-form">
+        {% assign form = page.competition-form %}
+        <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
+          {% include form/messages.html %}
+          <div class="form__content width width--lg">
+            {% for item in form.fields %}
+              <div class="form__input js-form-input">
+                {% case item.type %}
+                  {% when 'text' %}
+                    {% include form/text.html data=item %}
+                  {% when 'text-long' %}
+                    {% include form/text-long.html data=item %}
+                  {% when 'email' %}
+                    {% include form/email.html data=item %}
+                  {% when 'radio' %}
+                    {% include form/radio.html data=item %}
+                  {% when 'checkbox' %}
+                    {% include form/checkbox.html data=item %}
+                  {% when 'select' %}
+                    {% include form/select.html data=item %}
+                {% endcase %}
+              </div>
+            {% endfor %}
+            <div class="space--sm"></div>
+            <p class="text--sm text--normal">{{form.terms}}</p>
+            <div class="space--sm"></div>
+            <button type="submit" class="btn" disabled>{{form.submit}}</button>
           </div>
-          <div class="space--sm"></div>
-
-          <div class="rounded--md depth--sm bg--white">
-            <div class="img img--21-9" style="background-image: url({{site.img}}/img.jpg);"></div>
-            <div class="boxpad--md">
-              <div class="h h--xxs">Secret tip</div>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet.</p>
-            </div>
-          </div>
-
-        </div>
-
+        </form>
       </div>
     </div>
 
   </div>
 
+  <div class="space--xxxl"></div>
+
 </div>
-
-<div class="vpad--xl" id="complete-entry" style="display: none;">
-  <div class="container">
-    <div class="h h--lg text--center">Now complete your entry</div>
-    <div class="space--lg"></div>
-    <div id="entry-form" class="vpad--md">
-      {% assign form = page.competition-form %}
-      <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
-        {% include form/messages.html %}
-        <div class="form__content width width--md">
-          {% for item in form.fields %}
-            <div class="form__input js-form-input">
-              {% case item.type %}
-                {% when 'text' %}
-                  {% include form/text.html data=item %}
-                {% when 'text-long' %}
-                  {% include form/text-long.html data=item %}
-                {% when 'email' %}
-                  {% include form/email.html data=item %}
-                {% when 'radio' %}
-                  {% include form/radio.html data=item %}
-                {% when 'checkbox' %}
-                  {% include form/checkbox.html data=item %}
-                {% when 'select' %}
-                  {% include form/select.html data=item %}
-              {% endcase %}
-            </div>
-          {% endfor %}
-          <div class="space--sm"></div>
-          <p class="text--sm text--normal">{{form.terms}}</p>
-          <div class="space--sm"></div>
-          <button type="submit" class="btn" disabled>{{form.submit}}</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
 
 
 {% include nav/footer.html %}

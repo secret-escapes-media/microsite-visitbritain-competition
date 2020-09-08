@@ -37,4 +37,8 @@
     @include transition;
   }
   &:hover &__overlay { background-color: rgba($black,.6); }
+  &--hover {
+    transform: scale(1);
+    &:hover { transform: scale(1.025); }
+  }
 }

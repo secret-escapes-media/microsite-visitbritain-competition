@@ -1,31 +1,152 @@
 ---
 layout: competition
 id: competition
+title: Competition
 nav: true
 nav-order: 2
 nav-title: Competition
 
-title: Win the Best of British
+banner:
+  content: >
+    <div class="container text--center">
+      <div class="banner__title banner__title-overview"></div>
+      <div class="space--sm"></div>
+      <p class="p--xxxl text--upper text--bolder">Answer the questions below and we’ll match the results to one of our handpicked getaways.</p>
+    </div>
 
 
-questions:
-  types:
-    - type: Beach
-    - type: Country
-    - type: City
-    - type: Retreat
-    - type: In nature
-    - type: Wild coast
-  who:
-    - who: Whole family
-    - who: Partner & kids
-    - who: Friends
-    - who: On my own
-  locations:
-    - country: England
-    - country: Wales
+
+holiday-types:
+  question: What kind of things are you dreaming about for your next adventure?
+  options:
+    - id: crashing-waves
+      category: coast
+      name: Crashing waves
+    - id: long-morning-walks
+      category: country
+      name: Long morning walks
+    - id: talked-about-exhibitions
+      category: city
+      name: Talked-about exhibitions
+    - id: classic-fish-supper
+      category: coast
+      name: Classic fish supper
+    - id: pretty-villages
+      category: country
+      name: Pretty villages
+    - id: on-trend-hangouts
+      category: city
+      name: On-trend hangouts
+who:
+  question: Who do you want to escape with?
+  options:
+    - id: friend
+      name: A good friend
+    - id: family
+      name: Your family
+    - id: partner
+      name: A partner
+    - id: yourself
+      name: Just yourself
+locations:
+  question: Decisions, decisions... Where would you rather go?
+  options:
+    - id: england
+      name: England
+    - id: wales
+      name: Wales
+    - id: scotland
+      name: Scotland
+    - id: northern-ireland
+      name: Northern Ireland
 
 
+
+results:
+
+  - id: england-coast
+    title: Idyllic coasts of Cornwall
+    hotel:
+      location: North Cornwall, England
+      name: Stay in Watergate Bay Hotel
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Rocky Valley
+        description: Without the name giving too much away, this valley a little east of Tintagel is a rather beautiful spectacle. As the river cuts its way to the sea, a tall, craggy gorge is cut, with hidden waterfalls and intrepid trails to unpick. Don’t miss the early Bronze Age labyrinth carvings that add a touch of mystery to an already beguiling landscape.
+      - id: tip2
+        name: Roseland Peninsula
+        description: Enter this garden of hedgerows and pastures, where typical Cornish beauty rolls across gentle hills and off craggy cliffs. Unpick quiet coves and unspoilt beaches, before heading to Roseland’s heart, the town of St Mawes. This remarkably cosmopolitan spot has become somewhat of a ‘destination’, with a smart set of fine restaurants, boutiques and cafes, all graced by the effortlessly picturesque surroundings.
+
+  - id: england-city
+    title: Historic city of Bath
+    hotel:
+      location: Bath, England
+      name: Stay in The Bird
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Treasure hunting in Walcot Village, Bath
+        description: Known as the Artisan Quarter, this charming Bath neighbourhood is filled with eclectic shops. Discover your next treasure in a clutch of antique shops, or find something local and handmade in one of the many independent boutiques. Don’t miss the grotesque faces dotted on the wall of The Paragon, some representing characters from local myths, some carvings of real life locals.
+      - id: tip2
+        name: City night kayaking down the Avon, Bath
+        description: A rather peculiar way of exploring Bath, breeze past the gorgeous Georgian architecture from the slow ebb and flow of the river Avon, as you stand atop your paddleboard for a nighttime - well, we guess - paddle. Original Wild offers a range of waterborne experiences, but seeing the frankly beautiful city of Bath lit up at night, whilst also surfing along the river, is an experience not quickly forgotten.
+
+  - id: england-country
+    title: Country escape in Hampshire
+    hotel:
+      location: Winchester
+      name: Stay in Lainston House
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Fly fishing in New Forest, Hampshire
+        description: Who’s never once dreamed of fishing in a glassy stream, surrounded by the ancient trees of a magical woodland? The chalk streams of the rivers Test, Itchen and Wiltshire Avon in the New Forest are the birthplace of fly fishing, home to brown trout, grayling and atlantic salmon alike - and with plenty of fishing guides available in the local area to show you the ropes, you’ll be hooking your first catch in no time. Immersed in the spectral beauty of this incredible forest - with a packed lunch and flask of coffee in tow - lose yourself to the reflective wonders of the sport.
+      - id: tip2
+        name: Sustainable Foraging in Studland Bay, Dorset
+        description: Get closer to nature and learn how to live off the land as you gather cooking ingredients from the sea and shoreline of Studland Bay in Dorset. The Fore Adventure sea school has day-long crash courses in the art of foraging, teaching you how to find everything from crabs and cockles to edible plants and seaweeds. You travel by kayak to the creeks and islands around the bay, before bringing all your freshly-foraged ingredients together in the evening for a feast on the beach.
+
+  - id: wales-coast
+    title: A perfect mix of Welsh coast & country
+    hotel:
+      location: South Wales
+      name: Stay in The Coed-Y Mwstwr
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Discover outstanding beauty in Gower
+        description: The UK’s first ever Area Of Outstanding National Beauty certainly lives up to the moniker, with idyllic coastal walks and resplendent beaches. The waves make it a surfer paradise, the cliffs attract coasteering, and humble walkers are rewarded with exquisite scenery.
+      - id: tip2
+        name: Explore Waterfall Country in Wales
+        description: There are some truly spectacular waterfalls in the Vale of Neath. The Hollywood starlet is Henrhyd Falls, as featured in the film Batman – yet the heart of this fascinating spot lies further east. Try the Four Falls Walk to see the best of the Vale of Neath. From the dramatic Sgwd Clun-Gwyn that cascades from one tier into the next, to the spellbinding Sgwd yr Eira curtain where you can actually walk behind the falls, Waterfall Country is a truly magical place.
+
+  - id: scotland-country
+    title: Retreat to the Scottish Highlands
+    hotel:
+      location: Scottish Highlands
+      name: Stay in Glencoe House
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Seafood dining in Oban, Argyll
+        description: Known as ‘little bay’ in Gaelic, the seemingly unremarkable fishing town of Oban is the seafood capital of Scotland. After a day of walking through the achingly-beautiful Argyll hillsides, discover an abundance of award-winning restaurants and eateries along the harbour, a collection of locally-sourced gems serving up the freshest of catches, before winding down with a glass of malt whiskey taken straight from the local distillery. With fresh air, fresh food and soul-stirring scenery wherever you look, the town is a gateway to rejuvenation.
+      - id: tip2
+        name: Taste the peat - a tipsy island tour of Islay
+        description: The Isle of Islay, also known by the affectionate moniker ‘Queen of the Hebrides’, harbours one of those iconic Scottish temptations - renowned whiskey. Your arrival proves as stirring as the tipples that await, with a network of ferry crossings darting around the beguiling isles off the mainland. Exploring Islay will typically revolve around discovering some of the greatest, peatiest whiskies in the world - one dram at a time.
+
+  - id: northern-ireland-city
+    title: Northern Ireland's most enthralling city; Belfast
+    hotel:
+      location: Belfast, Northern Ireland
+      name: Stay in The Merchant
+      description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+    tips:
+      - id: tip1
+        name: Hop between the Quarters of Belfast
+        description: The Titanic City is a lively hub that effortlessly mixes Victorian pomp, industrial edge and contemporary cool. A city of characters, its quarters each take on different personalities; the red-brick and cobbles of the Cathedral Quarter, the post-industrial, cultural revival of the Titanic Quarter, and the buzzing drinks and dining scene of the trendy Linen Quarter – to name a few. Each shows a side to the city that remains totally enthralling, all easily walkable, and combined making Belfast wonderfully good craic.
+      - id: tip2
+        name: Causeway Coastal Route
+        description: The magnificent northern reaches of Ireland promise spectacular coastal exploits, as you skip between pretty coastal villages and discover beautiful natural wonders. Between Derry~Londonderry and Belfast, embark on a road trip that takes in the best of Northern Ireland’s wild outdoors. From hidden coves and rope bridges to myths and legends, see some of the best of Northern Ireland just a short hop from the city.
 
 
 
@@ -44,6 +165,69 @@ competition-form:
       type: email
       label: Email
       required: true
+    - id: holiday-type
+      type: radio
+      hidden: true
+      options:
+        - id: crashing-waves
+          label: 'Crashing waves'
+          value: 'crashing-waves'
+        - id: long-morning-walks
+          label: 'Long morning walks'
+          value: 'long-morning-walks'
+        - id: talked-about-exhibitions
+          label: 'Talked-about exhibitions'
+          value: 'talked-about-exhibitions'
+        - id: classic-fish-supper
+          label: 'Classic fish supper'
+          value: 'classic-fish-supper'
+        - id: pretty-villages
+          label: 'Pretty villages'
+          value: 'pretty-villages'
+        - id: on-trend-hangouts
+          label: 'On-trend hangouts'
+          value: 'on-trend-hangouts'
+
+    - id: who-with
+      type: radio
+      hidden: true
+      options:
+        - id: family
+          label: 'Family'
+          value: 'family'
+        - id: partner
+          label: 'Partner'
+          value: 'partner'
+        - id: friend
+          label: 'Friend'
+          value: 'friend'
+        - id: yourself
+          label: 'Yourself'
+          value: 'yourself'
+
+    - id: holiday-result
+      type: radio
+      hidden: true
+      options:
+        - id: england-country
+          label: 'England Country'
+          value: 'england-country'
+        - id: england-city
+          label: 'England City'
+          value: 'england-city'
+        - id: england-coast
+          label: 'England Coast'
+          value: 'england-coast'
+        - id: ireland-city
+          label: 'Ireland City'
+          value: 'ireland-city'
+        - id: scotland-country
+          label: 'Scotland Country'
+          value: 'scotland-country'
+        - id: wales-coast
+          label: 'Wales Coast'
+          value: 'wales-coast'
+
     - id: qualify
       type: radio
       label: Are you a UK resident and over the age of 18?
@@ -70,5 +254,7 @@ competition-form:
   submit: Submit Entry
   terms: >
     By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
+
+
 ---
 

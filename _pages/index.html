@@ -1,61 +1,91 @@
 ---
-layout: page
+layout: overview
 id: overview
 nav: true
 nav-order: 1
-title: Britain's Secrets
+title: Best of British
 
 banner:
   content: >
-    <div class="container container--xxl text--center">
-      <h1 class="h h--xl">Win the Best of British</h1>
-      <p class="p--xxxl">
-        Six irresistible staycations await. For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, find your perfect getaway here.
-      </p>
-      <div class="space--sm"></div>
-      <a href="{{site.baseurl}}/competition" class="btn">Enter now</a>
+    <div class="container text--center">
+      <div class="banner__title banner__title-overview"></div>
     </div>
+
+intro: >
+  <div class="h h--lg h--display text--upper">Six irresistible staycations await</div>
+  <p class="p--xxxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, find your perfect getaway here. </p>
 
 
 prizes:
 
-  - id: prize
-    prize-title: For beach lovers
-    location: Cornwall
-    title: Carbis Bay Hotel & Estate, Cornwall
-    description: Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean lacinia bibendum nulla sed consectetur.
+  - id: england-coast
+    title: Stay at Watergate Bay Hotel in North Cornwall
+    description: Head for the elements with this unparalleled coastal hideaway...
+
+  - id: england-country
+    title: Stay at Lainston House in Winchester
+    description: Head for the country and relish in the evocative charms of this classic country pile...
+
+  - id: england-city
+    title: Stay at boutique Bath hotel, The Bird
+    description: Boutique dreams await at this effortlessly-chic city pad in the heart of regal Bath...
+
+  - id: scotland
+    title: Stay at Glencoe House in the Scottish Highlands
+    description: Nestled in a deep, forested valley, this stately Scottish escape makes for perfect isolation...
+
+  - id: wales
+    title: Stay at the Coed-Y Mwstwr Hotel
+    description: Between coast and country, delight at the grandeur of this gorgeous Welsh getaway...
+
+  - id: northern-ireland
+    title: Stay at The Merchant in Belfast
+    description: A boutique - and frankly, breathtaking - Belfast stay in the heart of Northern Ireland’s most enthralling city...
 
 
 
 ---
 
 <div class="container">
-  {% for prize in page.prizes%}
+
+  <div class="text--center width width--xl">
+    {{page.intro}}
+    <div class="space--sm"></div>
+    <a href="{{site.baseurl}}/competition" class="btn btn--lg">Enter now</a>
+    <div class="space--lg"></div>
+    <hr class="hr--center">
+    <p class="h h--sm text--bold">What you could win:</p>
+  </div>
+  <div class="space--xxl"></div>
+  {% for prize in page.prizes %}
   <div class="bob{% cycle '', ' bob--swap' %}">
     <div class="bob__img">
-      <div class="img img--21-9 bg--black theme--dark">
-        <div class="img__content">{{prize.prize-title}}</div>
+      <div class="row row--no-gutters">
+        <div class="col col--constant-5">
+          <div class="prize__image prize__image-1 img img--2-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-1.jpg');"></div>
+        </div>
+        <div class="col col--constant-7">
+          <div class="prize__image prize__image-2 img img--4-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-2.jpg');"></div>
+        </div>
       </div>
-      <div class="img img--21-9" style="background-image: url('{{site.img}}/img.jpg');"></div>
+      <div class="prize__image prize__image-3 img img--21-9" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-3.jpg');"></div>
     </div>
 
     <div class="bob__text">
-      <div class="boxpad--md">
-        <img class="prize__location" src="{{site.img}}/icons/location-wh.svg" alt="" width="30">
-        <div class="text--smallcaps p--lg">{{prize.location}}</div>
-        <div class="space--sm"></div>
-        <div class="h h--xs">{{prize.title}}</div>
-        <div class="space--xxs"></div>
-        <p>{{prize.description}}</p>
-      </div>
+      <div class="text--smallcaps p--xl">Prize option {{forloop.index}}</div>
+      <div class="space--xs"></div>
+      <div class="h h--sm text--bold">{{prize.title}}</div>
+      <p class="p--xxl">{{prize.description}}</p>
     </div>
   </div>
   {% endfor %}
 
 
-  <div class="space--xl"></div>
-  <a href="{{site.baseurl}}/competition" class="btn">Enter now</a>
-  <div class="space--xxxl"></div>
+  <div class="text--center vpad--xxxl">
+    <div class="h h--xxs">For the chance of winning an escape from the day-to-day start your entry now!</div>
+    <div class="space--sm"></div>
+    <a href="{{site.baseurl}}/competition" class="btn btn--lg">Enter now</a>
+  </div>
 
 </div>
 

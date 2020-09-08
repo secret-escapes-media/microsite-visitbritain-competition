@@ -68,4 +68,35 @@
     background: -o-linear-gradient(bottom,#ffffff 0,rgba(255,255,255,0) 100%);
     background: linear-gradient(0deg,#ffffff 0,rgba(255,255,255,0) 100%);
   }
+
+
+
+  &__title {
+    display: block;
+    width: 100%;
+    max-width: $xxxl;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 10%;
+    }
+    &-overview {
+      background-image: url('../img/pages/overview/title.svg');
+      &:before { padding-top: 19.427%; }
+    }
+  }
+  &--competition {
+    height: 500px;
+    min-height: auto;
+    & .banner__fade {
+      background: -webkit-gradient(linear,left bottom,left top,from($grey-darkest),to(rgba($grey-darkest,0)));
+      background: -o-linear-gradient(bottom,$grey-darkest 0,rgba($grey-darkest,0) 100%);
+      background: linear-gradient(0deg,$grey-darkest 0,rgba($grey-darkest,0) 100%);
+    }
+  }
 }

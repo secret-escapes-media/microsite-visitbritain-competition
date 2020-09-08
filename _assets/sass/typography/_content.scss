@@ -38,15 +38,15 @@ hr, .hr {
 
 // theme
 .theme {
-  &--light {
-    // light background, dark text
-    color: $grey-dark;
-    & .h, &.h { color: $grey-darker; }
-  }
   &--dark {
     // dark background, light text
     color: $white;
     & .h, &.h { color: $white; }
+  }
+  &--light {
+    // light background, dark text
+    color: $grey-dark;
+    & .h, &.h { color: $grey-darker; }
   }
 }
 
