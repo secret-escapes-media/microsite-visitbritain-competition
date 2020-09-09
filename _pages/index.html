@@ -12,37 +12,138 @@ banner:
     </div>
 
 intro: >
-  <div class="h h--lg h--display text--upper">Six irresistible staycations await</div>
-  <p class="p--xxxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, find your perfect getaway here. </p>
+  <div class="h h--lg h--display text--upper">Win one of six irresistible staycations!</div>
+  <p class="p--xxxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, select your perfect getaway below. </p>
 
 
 prizes:
 
   - id: england-coast
+    location: North Cornwall, England
     title: Stay at Watergate Bay Hotel in North Cornwall
     description: Head for the elements with this unparalleled coastal hideaway...
 
   - id: england-country
+    location: Winchester, England
     title: Stay at Lainston House in Winchester
     description: Head for the country and relish in the evocative charms of this classic country pile...
 
   - id: england-city
+    location: Bath, England
     title: Stay at boutique Bath hotel, The Bird
     description: Boutique dreams await at this effortlessly-chic city pad in the heart of regal Bath...
 
   - id: scotland
+    location: Scottish Highlands
     title: Stay at Glencoe House in the Scottish Highlands
     description: Nestled in a deep, forested valley, this stately Scottish escape makes for perfect isolation...
 
   - id: wales
+    location: Wales
     title: Stay at the Coed-Y Mwstwr Hotel
     description: Between coast and country, delight at the grandeur of this gorgeous Welsh getaway...
 
   - id: northern-ireland
+    location: Belfast, Northern Ireland
     title: Stay at The Merchant in Belfast
     description: A boutique - and frankly, breathtaking - Belfast stay in the heart of Northern Ireland’s most enthralling city...
 
 
+
+competition-form:
+  id: comp
+  post-url: "#getFormUrl"
+  expiry-date: 2050-01-01
+  fields:
+
+    - id: where
+      type: radio
+      label: Where would you prefer to go?
+      required: true
+      options:
+        - id: scotland
+          label: 'Scotland'
+          value: 'scotland'
+        - id: northern-ireland
+          label: 'Northern Ireland'
+          value: 'northern-ireland'
+        - id: england
+          label: 'England'
+          value: 'england'
+        - id: wales
+          label: 'Wales'
+          value: 'wales'
+        - id: dont-mind
+          label: Don't mind
+          value: 'dont-mind'
+
+    - id: because
+      type: radio
+      label: Is that because…
+      required: true
+      options:
+        - id: dont-want-to-travel-far
+          label: 'Don’t want to travel far from home'
+          value: 'dont-want-to-travel-far'
+        - id: see-new-place
+          label: 'Keen to see a new place or faraway place'
+          value: 'see-new-place'
+        - id: na
+          label: 'N/A'
+          value: 'na'
+
+    - id: what-type
+      type: radio
+      label: What type of break are you looking for?
+      required: true
+      options:
+        - id: coast
+          label: 'A stay by the refreshing coast'
+          value: 'coast'
+        - id: countryside
+          label: 'A stay in the remote countryside '
+          value: 'countryside'
+        - id: city
+          label: 'A stay in a buzzing town or city'
+          value: 'city'
+
+    - id: incredible-hotel
+      type: radio
+      label: Would a particularly incredible hotel change your previous preferences? Ie. would you consider a city break over a coastal break if the hotel was exceptional?
+      required: true
+      options:
+        - id: yes
+          label: 'Yes'
+          value: 'yes'
+        - id: no
+          label: 'No'
+          value: 'no'
+
+    - id: name
+      type: text
+      label: Name
+      required: true
+
+    - id: email
+      type: email
+      label: Email
+      required: true
+
+    - id: opt-in
+      type: radio
+      label: Would you like to receive emails from Visit Britain?
+      required: true
+      options:
+        - id: opt-in-true
+          label: 'Yes'
+          value: 'yes'
+        - id: opt-in-false
+          label: 'No'
+          value: 'no'
+
+  submit: Submit Entry
+  terms: >
+    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
 
 ---
 
@@ -51,10 +152,7 @@ prizes:
   <div class="text--center width width--xl">
     {{page.intro}}
     <div class="space--sm"></div>
-    <a href="{{site.baseurl}}/competition" class="btn btn--lg">Enter now</a>
-    <div class="space--lg"></div>
-    <hr class="hr--center">
-    <p class="h h--sm text--bold">What you could win:</p>
+    <a href="#entry-form" class="btn btn--lg">Enter now</a>
   </div>
   <div class="space--xxl"></div>
   {% for prize in page.prizes %}
@@ -76,15 +174,65 @@ prizes:
       <div class="space--xs"></div>
       <div class="h h--sm text--bold">{{prize.title}}</div>
       <p class="p--xxl">{{prize.description}}</p>
+      <div class="space--sm"></div>
+      <a href="#entry-form" class="btn">I want this prize</a>
     </div>
   </div>
   {% endfor %}
 
 
   <div class="text--center vpad--xxxl">
-    <div class="h h--xxs">For the chance of winning an escape from the day-to-day start your entry now!</div>
+    <div class="h h--sm text--bold">Choose your escape!</div>
+    <div class="vpad--lg">
+      <div class="row">
+        {% for prize in page.prizes %}
+        <div class="col col--2">
+          <div class="img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}-2.jpg);">
+            <div class="img__content">
+              <div class="boxpad--sm">
+                <div class="h h--xs">{{prize.location}}</div>
+              </div>
+            </div>
+            <div class="img__overlay"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p>To help us serve you with the escapes you want, we'd love to hear a little about your travel plans and preferences at the moment</p>
     <div class="space--sm"></div>
-    <a href="{{site.baseurl}}/competition" class="btn btn--lg">Enter now</a>
+
+    <div id="entry-form">
+      {% assign form = page.competition-form %}
+      <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
+        {% include form/messages.html %}
+        <div class="form__content width width--lg">
+          {% for item in form.fields %}
+            <div class="form__input js-form-input">
+              {% case item.type %}
+                {% when 'text' %}
+                  {% include form/text.html data=item %}
+                {% when 'text-long' %}
+                  {% include form/text-long.html data=item %}
+                {% when 'email' %}
+                  {% include form/email.html data=item %}
+                {% when 'radio' %}
+                  {% include form/radio.html data=item %}
+                {% when 'checkbox' %}
+                  {% include form/checkbox.html data=item %}
+                {% when 'select' %}
+                  {% include form/select.html data=item %}
+              {% endcase %}
+            </div>
+          {% endfor %}
+          <div class="space--sm"></div>
+          <p class="text--sm text--normal">{{form.terms}}</p>
+          <div class="space--sm"></div>
+          <button type="submit" class="btn" disabled>{{form.submit}}</button>
+        </div>
+      </form>
+    </div>
+
   </div>
 
 </div>
