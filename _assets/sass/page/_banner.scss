@@ -74,7 +74,9 @@
   &__title {
     display: block;
     width: 100%;
-    max-width: $xxxl;
+    max-width: $xxl;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,16 +89,12 @@
     }
     &-overview {
       background-image: url('../img/pages/overview/title.svg');
-      &:before { padding-top: 19.427%; }
+      &:before { padding-top: 32.5%; }
     }
-  }
-  &--competition {
-    height: 500px;
-    min-height: auto;
-    & .banner__fade {
-      background: -webkit-gradient(linear,left bottom,left top,from($grey-darkest),to(rgba($grey-darkest,0)));
-      background: -o-linear-gradient(bottom,$grey-darkest 0,rgba($grey-darkest,0) 100%);
-      background: linear-gradient(0deg,$grey-darkest 0,rgba($grey-darkest,0) 100%);
+    &-offers {
+      background-image: url('../img/pages/offers/title.svg');
+      max-width: $lg;
+      &:before { padding-top: 20%; }
     }
   }
 }

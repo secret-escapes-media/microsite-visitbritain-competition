@@ -14,6 +14,18 @@ banner:
 intro: >
   <div class="h h--lg h--display text--upper">Win one of six irresistible staycations!</div>
   <p class="p--xxxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, select your perfect getaway below. </p>
+  <div class="space--md"></div>
+  <div class="hunter">
+    <div class="row row--valign-center">
+      <div class="col col--3">
+        <div class="hunter__logo"></div>
+      </div>
+      <div class="col col--9">
+        <p class="p--xl text--bold">Hunter boots included with every prize package</p>
+        <p>Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+    </div>
+  </div>
 
 
 prizes:
@@ -189,9 +201,8 @@ competition-form-masks:
 
   <div class="text--center width width--xl">
     {{page.intro}}
-    <div class="space--sm"></div>
-    <a href="#entry-form" class="btn btn--lg">Enter now</a>
   </div>
+
   <div class="space--xxl"></div>
   {% for prize in page.prizes %}
   <div class="bob{% cycle '', ' bob--swap' %}">
@@ -211,7 +222,7 @@ competition-form-masks:
       <div class="text--smallcaps p--xl">Prize option {{forloop.index}}</div>
       <div class="space--xs"></div>
       <div class="h h--sm text--bold">{{prize.title}}</div>
-      <p class="p--xxl">{{prize.description}}</p>
+      <p class="p--lg">{{prize.description}}</p>
       <div class="space--sm"></div>
       <a href="#entry-form" class="btn js-form-fill" data-target-id="comp-prize-{{prize.id}}">I want this prize</a>
     </div>
@@ -225,7 +236,7 @@ competition-form-masks:
 
 
   <div id="entry-form" class="text--center vpad--xxxl">
-    <div class="h h--sm text--bold">Choose your escape!</div>
+    <div class="h h--xs text--bold">Choose your escape!</div>
     <div class="space--lg"></div>
 
     <div class="row row--gutters-sm">

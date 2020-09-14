@@ -46,3 +46,33 @@
     transform: scale(1.1);
   }
 }
+
+.hunter {
+  border-radius: 5px;
+  border: 1px solid $grey-lighter;
+  background-color: #f5f5f3;
+  padding: $s2;
+  text-align: center;
+  @include bp($lg){
+    text-align: left;
+  }
+  &__logo {
+    background-image: url('../img/logo/hunter.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    max-width: 300px;
+    margin: auto;
+    @include bp($lg){
+      width: 80%;
+      margin-left: 0;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 42%;
+    }
+  }
+}
