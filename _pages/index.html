@@ -3,7 +3,7 @@ layout: overview
 id: overview
 nav: true
 nav-order: 1
-title: Best of British
+title: Competition
 
 banner:
   content: >
@@ -50,6 +50,8 @@ prizes:
 
 
 
+
+
 competition-form:
   id: comp
   post-url: "#getFormUrl"
@@ -61,32 +63,51 @@ competition-form:
       hidden: true
       options:
         - id: prize-england-coast
+          value: england-coast
         - id: prize-england-country
+          value: england-country
         - id: prize-england-city
+          value: england-city
         - id: prize-scotland
+          value: scotland
         - id: prize-wales
+          value: wales
         - id: prize-northern-ireland
+          value: northern-ireland
+
+    - id: type
+      type: images
+      label: What type of break are you looking for?
+      options:
+        - id: type-coast
+          label: 'The refreshing coast'
+          value: 'coast'
+        - id: type-country
+          label: 'The remote countryside '
+          value: 'country'
+        - id: type-city
+          label: 'A buzzing town or city'
+          value: 'city'
 
     - id: where
-      type: radio
+      type: images
       label: Where would you prefer to go?
-      required: true
       options:
-        - id: scotland
-          label: 'Scotland'
-          value: 'scotland'
-        - id: northern-ireland
-          label: 'Northern Ireland'
-          value: 'northern-ireland'
-        - id: england
-          label: 'England'
-          value: 'england'
-        - id: wales
-          label: 'Wales'
-          value: 'wales'
-        - id: dont-mind
+        - id: where-scotland
+          value: scotland
+          label: Scotland
+        - id: where-northern-ireland
+          value: northern-ireland
+          label: Northern Ireland
+        - id: where-england
+          value: england
+          label: England
+        - id: where-wales
+          value: wales
+          label: Wales
+        - id: where-dont-mind
+          value: dont-mind
           label: Don't mind
-          value: 'dont-mind'
 
     - id: because
       type: radio
@@ -103,24 +124,11 @@ competition-form:
           label: 'N/A'
           value: 'na'
 
-    - id: what-type
-      type: radio
-      label: What type of break are you looking for?
-      required: true
-      options:
-        - id: coast
-          label: 'A stay by the refreshing coast'
-          value: 'coast'
-        - id: countryside
-          label: 'A stay in the remote countryside '
-          value: 'countryside'
-        - id: city
-          label: 'A stay in a buzzing town or city'
-          value: 'city'
-
     - id: incredible-hotel
       type: radio
-      label: Would a particularly incredible hotel change your previous preferences? Ie. would you consider a city break over a coastal break if the hotel was exceptional?
+      label: >
+        Would a particularly incredible hotel change your previous preferences?<br />
+        i.e. would you consider a city break over a coastal break if the hotel was exceptional?
       required: true
       options:
         - id: yes
@@ -156,6 +164,25 @@ competition-form:
   terms: >
     By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
 
+
+
+competition-form-masks:
+  prizes:
+    - id: england-coast
+      title: North Cornwall, England
+    - id: england-country
+      title: Winchester, England
+    - id: england-city
+      title: Bath, England
+    - id: scotland
+      title: Scottish Highlands
+    - id: wales
+      title: Wales
+    - id: northern-ireland
+      title: Belfast, Northern Ireland
+
+
+
 ---
 
 <div class="container">
@@ -186,7 +213,7 @@ competition-form:
       <div class="h h--sm text--bold">{{prize.title}}</div>
       <p class="p--xxl">{{prize.description}}</p>
       <div class="space--sm"></div>
-      <a href="#entry-form" class="btn js-form-fill" data-target-id="prize-{{prize.id}}">I want this prize</a>
+      <a href="#entry-form" class="btn js-form-fill" data-target-id="comp-prize-{{prize.id}}">I want this prize</a>
     </div>
   </div>
   {% endfor %}
@@ -199,35 +226,39 @@ competition-form:
 
   <div id="entry-form" class="text--center vpad--xxxl">
     <div class="h h--sm text--bold">Choose your escape!</div>
-    <div class="vpad--lg">
-      <div class="row">
-        {% for prize in page.prizes %}
-        <div class="col col--2">
-          <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}-2.jpg);">
-            <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="prize-{{prize.id}}"></a>
-            <div class="img__content">
-              <div class="boxpad--sm">
-                <div class="h h--xs">{{prize.location}}</div>
-              </div>
+    <div class="space--lg"></div>
+
+    <div class="row row--gutters-sm">
+      {% for prize in page.prizes %}
+      <div class="col col--2">
+        <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}-2.jpg);">
+          <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="prize-{{prize.id}}"></a>
+          <div class="img__content">
+            <div class="boxpad--sm">
+              <div class="h h--xxs">{{prize.location}}</div>
             </div>
-            <div class="img__overlay"></div>
           </div>
+          <div class="img__overlay"></div>
         </div>
-        {% endfor %}
       </div>
+      {% endfor %}
     </div>
-    <p class="p--xl">To help us serve you with the escapes you want, we'd love to hear a little about your travel plans and preferences at the moment</p>
-    <div class="space--sm"></div>
+
+    <div class="space--lg"></div>
+    <hr class="hr--center">
+    <p class="p--xl">To help us provide the escapes you want, we'd love to hear a little about your travel plans and preferences at the moment</p>
 
     {% assign form = page.competition-form %}
     <form class="form boilerform competition-form" action="{{form.post-url}}" method="POST" data-expires="{{form.expiry-date}}" novalidate>
       {% include form/messages.html %}
-      <div class="form__content width width--xl">
+      <div class="form__content width width--xxl">
         {% for item in form.fields %}
           <div class="form__input js-form-input{% if item.hidden %} hidden{% endif %}">
             {% case item.type %}
               {% when 'text' %}
                 {% include form/text.html data=item %}
+              {% when 'images' %}
+                {% include form/images.html data=item %}
               {% when 'text-long' %}
                 {% include form/text-long.html data=item %}
               {% when 'email' %}
