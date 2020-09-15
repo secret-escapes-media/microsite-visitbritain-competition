@@ -13,7 +13,9 @@ banner:
 
 intro: >
   <div class="h h--sm h--sans text--bold text--upper">Win one of six irresistible staycations!</div>
-  <p class="p--xxxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, select your perfect getaway below. </p>
+  <p class="p--xxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, enter below.</p>
+  <p class="p--xxl">What’s more, you’ll also receive a pair of luxurious Hunter welly boots for your getaway, so no matter the weather, you can explore in style...</p>
+
 
 
 prizes:
@@ -22,31 +24,37 @@ prizes:
     location: North Cornwall, England
     title: Stay at Watergate Bay Hotel in North Cornwall
     description: Head for the elements with this unparalleled coastal hideaway...
+    hunter: Hunter Original Tall Wellington Boots
 
   - id: england-country
     location: Winchester, England
     title: Stay at Lainston House in Winchester
     description: Head for the country and relish in the evocative charms of this classic country pile...
+    hunter: Hunter Balmoral Adjustable Wellington Boots
 
   - id: england-city
     location: Bath, England
     title: Stay at boutique Bath hotel, The Bird
     description: Boutique dreams await at this effortlessly-chic city pad in the heart of regal Bath...
+    hunter: Hunter Original Chelsea Boots
 
   - id: scotland
     location: Scottish Highlands
     title: Stay at Glencoe House in the Scottish Highlands
     description: Nestled in a deep, forested valley, this stately Scottish escape makes for perfect isolation...
+    hunter: Hunter Balmoral Full Zip
 
   - id: wales
     location: Wales
     title: Stay at the Coed-Y Mwstwr Hotel
     description: Between coast and country, delight at the grandeur of this gorgeous Welsh getaway...
+    hunter: Hunter Original Sherpa Boots
 
   - id: northern-ireland
     location: Belfast, Northern Ireland
     title: Stay at The Merchant in Belfast
     description: A boutique - and frankly, breathtaking - Belfast stay in the heart of Northern Ireland’s most enthralling city...
+    hunter: Hunter Original Play Short Wellington Boots
 
 
 
@@ -197,13 +205,13 @@ competition-form-masks:
     <div class="bob__img">
       <div class="row row--no-gutters">
         <div class="col col--constant-5">
-          <div class="prize__image prize__image-1 img img--2-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-1.jpg');"></div>
+          <div class="prize__image prize__image-1 img img--2-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}/1.jpg');"></div>
         </div>
         <div class="col col--constant-7">
-          <div class="prize__image prize__image-2 img img--4-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-2.jpg');"></div>
+          <div class="prize__image prize__image-2 img img--4-3" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}/2.jpg');"></div>
         </div>
       </div>
-      <div class="prize__image prize__image-3 img img--21-9" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}-3.jpg');"></div>
+      <div class="prize__image prize__image-3 img img--21-9" style="background-image: url('{{site.img}}/pages/{{page.id}}/{{prize.id}}/3.jpg');"></div>
     </div>
 
     <div class="bob__text">
@@ -213,12 +221,15 @@ competition-form-masks:
       <p class="p--lg">{{prize.description}}</p>
       <div class="space--sm"></div>
       <div class="hunter">
-        <div class="row row--valign-center">
+        <div class="row row--valign-center row--no-gutters">
           <div class="col col--4">
-            <div class="hunter__logo"></div>
+            <div class="hunter__image img img--1-1" style="background-image: url({{site.img}}/pages/{{page.id}}/{{prize.id}}/hunter.jpg);"></div>
           </div>
           <div class="col col--8">
-            <p>Sed posuere consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <div class="boxpad--sm">
+              <div class="hunter__logo"></div>
+              <p class="p--lg">Including 2 pairs of <span class="text--bold">{{prize.hunter}}</span></p>
+            </div>
           </div>
         </div>
       </div>
@@ -241,7 +252,7 @@ competition-form-masks:
     <div class="row row--gutters-sm">
       {% for prize in page.prizes %}
       <div class="col col--2">
-        <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}-2.jpg);">
+        <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}/2.jpg);">
           <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="prize-{{prize.id}}"></a>
           <div class="img__content">
             <div class="boxpad--sm">
