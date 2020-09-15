@@ -51,7 +51,7 @@
   border-radius: 5px;
   border: 1px solid $grey-lighter;
   background-color: #f5f5f3;
-  padding: $s0;
+  padding: 0;
   text-align: center;
   @include bp($lg){
     text-align: left;
@@ -62,10 +62,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 40%;
-    max-width: 300px;
+    max-width: 80px;
     margin: auto;
     @include bp($lg){
-      width: 100%;
+      width: 60%;
       margin-left: 0;
     }
     &:before {
