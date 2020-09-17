@@ -20,105 +20,119 @@
 #####################################
 
 
-- id: video
-  type: youtube
-  pages:
-    - id: all
-  youtube-id: Os6R4G4dimY
-
-- id: another
-  pages:
-    - id: all
-  content: >
-    <div class="h h--lg">Another Modal</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-    <p>Quos non sit omnis cum facilis, laborum culpa natus totam quae animi magnam minima aspernatur, harum dolorem nostrum maxime distinctio! Facilis hic exercitationem, blanditiis, saepe iusto minus libero unde amet molestiae, nemo id! Dolores aperiam commodi dolore neque ipsum rerum error, eum. Ratione rem maxime incidunt quam nostrum, voluptas alias soluta accusamus magni quibusdam, tempore numquam! Unde nemo a optio dolore sunt ex repellat molestiae quisquam quas. Fugiat, eligendi ullam. Exercitationem sapiente neque debitis omnis commodi cumque illo magni quam.</p>
-
-- id: image-credits
-  image: img.jpg
-  pages:
-    - id: all
-  content: >
-    <div class="h h--md">Image Credits</div>
-    <ol>
-      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non tenetur dolorem quod, perspiciatis explicabo harum doloremque aut eveniet reprehenderit voluptatibus.</li>
-      <li>Cupiditate fugiat voluptatibus molestias soluta perspiciatis deserunt eum officia autem laboriosam, fugit provident harum architecto delectus iure dolores quis corrupti.</li>
-      <li>Adipisci eligendi, ut. Voluptas optio a rerum perferendis eligendi esse minus voluptate consequatur, ullam cupiditate distinctio ad, est, vitae beatae!</li>
-      <li>Odit alias, expedita quis. Quibusdam soluta odit architecto labore. Vel quaerat dignissimos minus accusamus deserunt et, fugit a odit provident!</li>
-      <li>Inventore voluptate, quis quibusdam consectetur excepturi officia ipsum fugit, itaque sapiente, rem, saepe sunt libero ducimus reiciendis officiis nobis et?</li>
-      <li>Minima aperiam fuga voluptate cupiditate commodi sed enim! Dolore qui, accusamus accusantium iste asperiores quidem molestias officiis quia necessitatibus minus.</li>
-      <li>Id illum non atque perspiciatis alias natus, laboriosam nihil dolorum voluptatum libero cum vel ex commodi deserunt debitis maxime sed.</li>
-      <li>Ab cum voluptas hic asperiores accusantium et voluptatem, architecto a saepe modi culpa laudantium, unde eveniet fugiat nobis excepturi molestias?</li>
-    </ol>
-
-- id: poi
-  image: img.jpg
-  pages:
-    - id: all
-  content: >
-    <div class="h h--md">Example POI</div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing ept. Non tenetur dolorem quod, perspiciatis exppcabo harum doloremque aut eveniet reprehenderit voluptatibus.</p>
-    <p>Cupiditate fugiat voluptatibus molestias soluta perspiciatis deserunt eum officia autem laboriosam, fugit provident harum architecto delectus iure dolores quis corrupti.</p>
-    <p>Adipisci epgendi, ut. Voluptas optio a rerum perferendis epgendi esse minus voluptate consequatur, ullam cupiditate distinctio ad, est, vitae beatae!</p>
-
-#################################################
-#   academy-gallery
-#################################################
-
-- id: gallery
-  type: series
-  pages:
-    - id: all
-
-  contents:
-
-    - id: whisky-drinks
-      image: img.jpg
-      content: >
-        <div class="h h--lg">He drinks the Whisky drinks</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-
-
-    - id: vodka-drinks
-      image: img.jpg
-      content: >
-        <div class="h h--lg">He drinks the Vodka drinks</div>
-        <p>Voluptatem, inventore culpa nobis esse officiis praesentium fugiat illo deserunt? Inventore perspiciatis accusantium ad quaerat voluptas nostrum, illum magni, quas. Temporibus rerum eveniet quas esse modi veritatis, sequi eaque hic unde consequuntur, nisi maiores officiis odit eligendi nulla non eius cupiditate id tenetur nam. Dicta, excepturi, odio! Rem optio modi, deleniti eligendi, praesentium harum ipsam minus unde, voluptates commodi voluptatem voluptas eveniet reiciendis qui alias. Aut, earum, temporibus. Ut minus atque nemo deleniti possimus vitae rem, ad voluptatibus modi dolorum?</p>
-
-    - id: larger-drinks
-      image: img.jpg
-      content: >
-        <div class="h h--lg">He drinks the Larger drinks</div>
-        <p>Hic, ratione consequuntur tempora error dicta quis minus cumque vero? Repellat facere nam blanditiis nostrum praesentium in tenetur. Sapiente dicta nostrum facilis, repudiandae natus doloribus voluptatibus delectus a distinctio asperiores, quidem quisquam in, officiis aut non tempore incidunt nihil expedita ea! Quibusdam et, eligendi. Aperiam omnis nobis beatae, rem minus, dicta eligendi sequi nisi, quam at expedita mollitia accusamus nostrum quo quisquam ratione, architecto unde eaque assumenda ab maxime minima nemo! Sunt odit qui distinctio voluptatibus. Repellat placeat vitae commodi.</p>
-
-    - id: cider-drinks
-      image: img.jpg
-      content: >
-        <div class="h h--lg">He drinks the Cider drinks</div>
-        <p>Ipsam harum numquam corporis at fugit necessitatibus porro possimus laboriosam odit dolores quaerat nemo veritatis incidunt, totam perspiciatis eaque magnam debitis delectus? Harum fuga quia animi, ipsa in consectetur, quae nostrum dolores sint molestiae sit consequatur odit enim ex optio nisi eveniet expedita accusantium iure commodi illum quidem cum unde dolorem! Expedita aliquam neque, reprehenderit voluptatum perspiciatis facere quod ab laboriosam aperiam. Delectus molestias atque, cumque quae labore nisi eveniet odit! Dolorem, ex hic nisi quam deleniti, et deserunt sapiente!</p>
-
-
 #################################################
 #   Competition
 #################################################
 
 - id: competition-terms
   pages:
-    - id: competition
+    - id: overview
   content: >
     <div class="content-spacing">
-      <h3 class="h h--lg">Competition terms & conditions</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime est soluta expedita inventore corrupti ipsam illo, eligendi sit id accusamus iure dicta qui suscipit culpa fugiat possimus consequatur totam iste perspiciatis delectus nesciunt deleniti, cumque nemo labore? Nesciunt explicabo velit iure, et voluptatibus beatae vitae laboriosam. Magni suscipit, facere eum culpa ab ullam, accusantium tempora, ut similique vero odit placeat sit tenetur quas, consectetur eaque. Praesentium distinctio, quae mollitia amet! Libero debitis minima cumque, eaque ipsam rerum porro, quo.</p>
-      <p>Quos non sit omnis cum facilis, laborum culpa natus totam quae animi magnam minima aspernatur, harum dolorem nostrum maxime distinctio! Facilis hic exercitationem, blanditiis, saepe iusto minus libero unde amet molestiae, nemo id! Dolores aperiam commodi dolore neque ipsum rerum error, eum. Ratione rem maxime incidunt quam nostrum, voluptas alias soluta accusamus magni quibusdam, tempore numquam! Unde nemo a optio dolore sunt ex repellat molestiae quisquam quas. Fugiat, eligendi ullam. Exercitationem sapiente neque debitis omnis commodi cumque illo magni quam.</p>
+      <h3 class="h h--xs text--bold">Competition terms & conditions</h3>
+      <div class="space--md"></div>
+
+      <h5 class="h h--xxxs text--bold">PROMOTER AND PARTICIPANTS</h5>
+      <p>
+        1. The Promoter is Secret Escapes Ltd, (registered number 07026107) 120 Holborn, London, EC1N 2TD (the “Promoter”).<br>
+        2. All entrants (“Participants”) must be Great Britain and Northern Ireland residents aged 18 or over.<br>
+        3. Employees of Secret Escapes, their affiliated companies, their families, agents and other parties directly involved with this promotion and the sponsorship are not eligible to enter.<br>
+        4. By entering this prize draw, all participants are deemed to have agreed to be bound by these terms and conditions unless notified otherwise in writing.
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">THE PRIZE DRAW</h5>
+      <p>
+        5. To enter this prize draw, participants are asked to fill out a short questionnaire. <br>
+        6. The Promotion starts at 09:00 on 18.09.2020  and all entries must be received by no later than 23.59 UK time on the closing date of 09.10.2020.<br>
+        7. Incomplete, invalid or inappropriate entries, or entries received after the closing date will not be eligible to win.
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">HOW TO PARTICIPATE</h5>
+      <p>
+        8. To enter this draw, Participants must fill in the form on the prize draw page at the Promoter’s website providing the information about their name and e-mail address and travel preferences.<br>
+        9. All entries must be received between the entry date and the close date (UK time).
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">PRIZE DRAW REQUIREMENTS</h5>
+      <p>
+        10. Participants agree to be contacted by the Promoter for the purposes of administering the prize draw.<br>
+        11. Promoter reserves the right to disqualify incomplete or illegible entries or which otherwise do not meet the requirements.<br>
+        12. Winners agrees for Promoter to share the Winners name and contact details with<br>
+        Visit Britain so Visit Britain can contact the Winners directly regarding the right Winner grants to Visit Britain to post and share approved holiday photos and videos resulting from their prize on Visit Britain social media channels for the purposes of highlighting the promotion.
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">THE PRIZE</h5>
+      <p>
+        13. The prizes available will consist of the following:<br>
+        6 entrants will be awarded a hotel stay allocated to them by the Promoter<br>
+        A 3 - night ‘Taste of the Bay’ stay at Watergate Bay, Cornwall for 2 people<br>
+        dinner on each night and breakfast on each morning of stay;<br>
+        The stay is subject to availability, and all school holidays and UK bank holidays are blacked out<br>
+        The stay must be taken by the 31 March 2021<br>
+        A 2 - night stay at Lainston House in a traditional junior suite for 2 people<br>
+        breakfast on each morning of stay, with a 3 course dinner included on 1 evening<br>
+        The stay is subject to availability, all Saturday nights and UK bank holidays are blacked out<br>
+        The stay must be taken by the 31 March 2021<br>
+        A 2 - night stay at Glenco in a suite for 2 people<br>
+        breakfast on each morning of stay, with a 3 course dinner included on 1 evening<br>
+        The stay is subject to availability, all UK bank holidays and 24 December 2020 - 3rd January 2021 are blacked out<br>
+        The stay must be taken by the 31 March 2021<br>
+        A 3 - night stay at Coed-Y Mwstyr for 2 people<br>
+        breakfast on each morning of stay and afternoon tea on one day<br>
+        The stay is subject to availability, all UK bank holidays are blacked out<br>
+        The stay must be taken by the 31 March 2021<br>
+        A 2 - night stay at The Merchant Hotel, Belfast for 2 people<br>
+        breakfast on each morning and a three course dinner in Berts Jazz Bar<br>
+        One 45 minute back,neck & scalp massage per person<br>
+        The stay must be booked Sunday - Thursday, is subject to availability and all UK bank holidays are blacked out<br>
+        The stay must be taken by the 31 March 2021<br>
+        A 2 - night stay at The Bird, Bath for 2 people<br>
+        breakfast on each morning <br>
+        Afternoon tea on the day of arrival<br>
+        Dinner on one night with a bottle of selected wine<br>
+        The stay is subject to availability, all UK bank holidays are blacked out including 24 December 2020 - 2 Jan 2021<br>
+        The stay must be taken by the 31 March 2021<br>
+        These are subject to availability and any government guidelines/restrictions in place at the chosen destination (which may affect the availability of facilities at the hotel), as well as the booking terms and conditions of Secret Escapes which can be viewed at www.secretescapes.com/terms-and-conditions.<br>
+        14. For entrants who win a hotel stay, all stays must be completed by 31 March 2021. In the event that:<br>
+        You are unable to travel due to: <br>
+        contracting COVID-19;<br>
+        Being required to self-isolate pursuant to government guidelines; or<br>
+        Being resident in an area subject to government restrictions to combat the spread of COVID-19, out of which travel is not permitted; <br>
+        or<br>
+        Your chosen hotel is closed, or travel is not permitted to its vicinity due to government restrictions to combat the spread of COVID-19,<br>
+        the Promoter will arrange either an alternative hotel or an alternative date of stay as soon as possible after such circumstances are no longer applicable. <br>
+        15. In the event of circumstances beyond our control  the Promoter is not responsible for delays in travel.<br>
+        16. Promoter reserves the right to publish name, town and county of the winner or to publicise any prize giving presentation after the date of the draw. If the winner does not wish such details to be published, they must advise the promoter at time of being notified that they have won.<br>
+        17. The prizes are non-transferable and no cash alternatives will be substituted for the prizes on offer. In the event that the prizes offered are unavailable due to circumstances beyond our control, the promoter reserves the right to offer an alternative prize of equal or greater value.<br>
+        18. The winner must claim the prize no later than 7 days after the winner has been informed.<br>
+        19. If the winner rejects or fails to claim the prize on time in accordance with clause 16 the prize may be awarded to other entrants at the absolute and sole discretion of the promoter.
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">SELECTION</h5>
+      <p>
+        20. The winner will be drawn at random at the end of the prize draw by Secret Escapes from all submissions received between the entry date and the close date.<br>
+        21. The winner will be contacted via email by Secret Escapes to the winner’s email address with the next steps of how to claim the prize.<br>
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">DISCLAIMER</h5>
+      <p>
+        22. Promoter reserves the right to refuse to honour any entry or to recover the full value of any prize if it considers there has been an abuse or breach of the terms and conditions of this Promotion.<br>
+        23. The Promoter shall not be liable for any loss, damage or injury of any nature however caused, sustained by any participant under this promotion. However, nothing in these rules shall have the effect of excluding or restricting the promoter’s liability for personal injury or death caused by the proven negligence of its employees or contractors.<br>
+        24. In the event of a dispute over interpretation or implementation of the rules on any matter related to the prize draw, the decision of the directors of the Promoter is final and no correspondence will be entered into.<br>
+        25. Although the Promotion may be featured on Facebook and Instagram, this Promotion is not sponsored, endorsed or administered by, or associated with Facebook and Instagram. By entering this Promotion, all entrants release Facebook and Instagram from any liability arising out of this Promotion. Participants are providing information to the Promoter and not to Facebook and Instagram. The information entrants provide will only be used for the purposes referred to in these terms and conditions.
+      </p>
+
+      <div class="space--xs"></div>
+      <h5 class="h h--xxxs text--bold">DATA PROTECTION</h5>
+      <p>
+        26. All personal data collected as part of the Promotion will be handled in accordance with the Secret Escapes privacy notice. Entrants can view a copy of such notice at www.secretescapes.com/privacy-policy.  <br>
+        27. Where you opt-in to receive marketing communications from Visit Britain by providing us with your details when you entered this competition, you will receive such communications from Visit Britain about their products and services. Visit Britain will hold your personal data in accordance with the terms of its privacy policy. You can view a copy of Visit Britain  privacy policy at: https://www.visitbritain.com/gb/en/privacy-policy
+      </p>
+
     </div>

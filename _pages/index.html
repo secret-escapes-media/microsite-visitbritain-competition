@@ -7,7 +7,7 @@ title: Competition
 
 banner:
   content: >
-    <div class="container text--center">
+    <div class="container container--no-padding text--center">
       <div class="banner__title banner__title-overview"></div>
     </div>
 
@@ -63,7 +63,7 @@ prizes:
 competition-form:
   id: comp
   post-url: "https://getform.io/f/13e1721a-2ed1-4cad-915c-1a162bc5867c"
-  expiry-date: 2020-11-30
+  expiry-date: 2020-12-30
   fields:
 
     - id: prize
@@ -177,7 +177,7 @@ competition-form:
 
   submit: Submit Entry
   terms: >
-    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition and that you have read our <a target="_blank" href="www.secretescapes.com/privacy-policy"></a>privacy policy</a>.
+    By submitting your entry, you agree to the <a href="#" class="js-open-modal text--link" data-open-modal="competition-terms">terms and conditions</a> of this competition and that you have read our <a target="_blank" class="text--link" href="www.secretescapes.com/privacy-policy">privacy policy</a>.
 
 
 
@@ -208,7 +208,7 @@ competition-form-masks:
 
   <div class="space--xxl"></div>
   {% for prize in page.prizes %}
-  <div class="bob{% cycle '', ' bob--swap' %}">
+  <div class="prize bob{% cycle '', ' bob--swap' %}">
     <div class="bob__img">
       <div class="row row--no-gutters">
         <div class="col col--constant-5">
@@ -229,10 +229,10 @@ competition-form-masks:
       <div class="space--sm"></div>
       <div class="hunter">
         <div class="row row--valign-center row--no-gutters">
-          <div class="col col--4">
-            <div class="hunter__image img img--1-1" style="background-image: url({{site.img}}/pages/{{page.id}}/{{prize.id}}/hunter.jpg);"></div>
+          <div class="col col--constant-4">
+            <div class="hunter__image img img--1-1 img--lg-4-3 img--xxl-1-1" style="background-image: url({{site.img}}/pages/{{page.id}}/{{prize.id}}/hunter.jpg);"></div>
           </div>
-          <div class="col col--8">
+          <div class="col col--constant-8">
             <div class="boxpad--sm">
               <div class="hunter__logo"></div>
               <p class="p--lg">Including 2 pairs of <span class="text--bold">{{prize.hunter}}</span></p>
@@ -258,8 +258,8 @@ competition-form-masks:
 
     <div class="row row--gutters-sm">
       {% for prize in page.prizes %}
-      <div class="col col--2">
-        <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}/2.jpg);">
+      <div class="col col--constant-6 col--lg-4 col--xxl-2">
+        <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--4-3 img--xxl-3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}/2.jpg);">
           <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="comp-prize-{{prize.id}}"></a>
           <div class="img__content">
             <div class="boxpad--sm">

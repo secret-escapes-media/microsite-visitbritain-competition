@@ -7,10 +7,10 @@ $('.js-form-fill').click(function(){
   var mask = $('#mask-' + target);
   // deselect other mask components in group
   var maskgroup = mask.data('form-group');
-  $(".form-mask[data-form-group='" + maskgroup + "'].selected").removeClass('selected');
+  $(".form-mask[data-form-group='" + maskgroup + "']").removeClass('selected').addClass('disabled');
   // select
   $('#' + target).click();
-  mask.addClass('selected');
+  mask.removeClass('disabled').addClass('selected');
 
   validatePrizes();
 });
