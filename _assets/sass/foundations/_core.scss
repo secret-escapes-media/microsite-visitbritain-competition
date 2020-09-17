@@ -5,7 +5,7 @@
 body, html { height: 100%; }
 
 // accessible hide element
-.hidden { display: none; visibility: hidden; height: 0 !important; overflow: hidden; }
+.hidden { display: none !important; visibility: hidden; height: 0 !important; overflow: hidden; }
 
 // global box-sizing & font smoothing
 *,

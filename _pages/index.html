@@ -62,20 +62,21 @@ prizes:
 
 competition-form:
   id: comp
-  post-url: "#getFormUrl"
-  expiry-date: 2050-01-01
+  post-url: "https://getform.io/f/13e1721a-2ed1-4cad-915c-1a162bc5867c"
+  expiry-date: 2020-11-30
   fields:
 
     - id: prize
       type: radio
       hidden: true
+      required: true
       options:
         - id: prize-england-coast
-          value: england-coast
+          value: cornwall-england
         - id: prize-england-country
-          value: england-country
+          value: winchester-england
         - id: prize-england-city
-          value: england-city
+          value: bath-england
         - id: prize-scotland
           value: scotland
         - id: prize-wales
@@ -83,9 +84,10 @@ competition-form:
         - id: prize-northern-ireland
           value: northern-ireland
 
-    - id: type
+    - id: type-of-holiday
       type: images
       label: What type of break are you looking for?
+      required: true
       options:
         - id: type-coast
           label: 'The refreshing coast'
@@ -97,9 +99,10 @@ competition-form:
           label: 'A buzzing town or city'
           value: 'city'
 
-    - id: where
+    - id: holiday-where
       type: images
       label: Where would you prefer to go?
+      required: true
       options:
         - id: where-scotland
           value: scotland
@@ -117,7 +120,7 @@ competition-form:
           value: dont-mind
           label: Don't mind
 
-    - id: because
+    - id: holiday-reason
       type: radio
       label: Is that because…
       required: true
@@ -127,7 +130,7 @@ competition-form:
           value: 'dont-want-to-travel-far'
         - id: see-new-place
           label: 'Keen to see a new place or faraway place'
-          value: 'see-new-place'
+          value: 'see-a-new-place'
         - id: na
           label: 'N/A'
           value: 'na'
@@ -156,21 +159,25 @@ competition-form:
       label: Email
       required: true
 
-    - id: opt-in
-      type: radio
-      label: Would you like to receive emails from Visit Britain?
-      required: true
+    - id: opt-in-partner
+      type: checkbox
+      label:
       options:
-        - id: opt-in-true
-          label: 'Yes'
+        - id: opt-in-partner-true
+          label: 'Please tick here if you would like to receive emails from Visit Britain'
           value: 'yes'
-        - id: opt-in-false
-          label: 'No'
-          value: 'no'
+
+    - id: opt-in-secret-escapes
+      type: checkbox
+      label:
+      options:
+        - id: opt-in-secret-escapes-true
+          label: 'Please tick here if you want to be kept up to date with the best deals from Secret Escapes'
+          value: 'yes'
 
   submit: Submit Entry
   terms: >
-    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition
+    By submitting your entry, you agree to the <a href="#" class="js-open-modal link--underlined" data-open-modal="competition-terms">terms and conditions</a> of this competition and that you have read our <a target="_blank" href="www.secretescapes.com/privacy-policy"></a>privacy policy</a>.
 
 
 
@@ -253,7 +260,7 @@ competition-form-masks:
       {% for prize in page.prizes %}
       <div class="col col--2">
         <div id="mask-comp-prize-{{prize.id}}" data-form-group="prize" class="form-mask img img--3-4 img--hover rounded--md depth--md" style="background-image: url({{site.img}}/pages/overview/{{prize.id}}/2.jpg);">
-          <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="prize-{{prize.id}}"></a>
+          <a href="javascript:void(0);" class="img__link js-form-fill" data-target-id="comp-prize-{{prize.id}}"></a>
           <div class="img__content">
             <div class="boxpad--sm">
               <div class="h h--xxs">{{prize.location}}</div>
@@ -274,7 +281,7 @@ competition-form-masks:
       {% include form/messages.html %}
       <div class="form__content width width--xxl">
         {% for item in form.fields %}
-          <div class="form__input js-form-input{% if item.hidden %} hidden{% endif %}">
+          <div class="form__input js-form-input{% if item.hidden %} hidden{% endif %}" id="form__input__{{item.id}}">
             {% case item.type %}
               {% when 'text' %}
                 {% include form/text.html data=item %}
@@ -296,7 +303,7 @@ competition-form-masks:
         <div class="space--sm"></div>
         <p class="text--sm text--normal">{{form.terms}}</p>
         <div class="space--sm"></div>
-        <button type="submit" class="btn" disabled>{{form.submit}}</button>
+        <button type="submit" class="btn js-form-btn" disabled>{{form.submit}}</button>
       </div>
     </form>
 
