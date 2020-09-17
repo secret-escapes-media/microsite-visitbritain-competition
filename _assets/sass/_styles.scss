@@ -78,3 +78,38 @@
     }
   }
 }
+
+.sharing {
+  background-color: $grey-darkest;
+  border: 1px solid rgba($grey-darkest,0.2);
+  border-radius: 5px;
+  &:hover {
+    background-color: $black;
+  }
+  & .img__content { padding: 0; }
+  &__icon {
+    width: 60%;
+    max-width: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 100%;
+    }
+  }
+  &--facebook { background-color: #227BEF;
+    &:hover { background-color: darken(#227BEF,10); }
+  }
+  &--twitter { background-color: #2AA3EF;
+    &:hover { background-color: darken(#2AA3EF,10); }
+  }
+  &--whatsapp { background-color: #22B229;
+    &:hover { background-color: darken(#22B229,10); }
+  }
+  &--email { background-color: #227BEF;
+    &:hover { background-color: darken(#227BEF,10); }
+  }
+}

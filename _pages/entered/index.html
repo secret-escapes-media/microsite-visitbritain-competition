@@ -4,8 +4,42 @@ id: entered
 nav: false
 
 title: You’ve successfully entered. Good luck!
-intro: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, natus modi accusamus debitis assumenda magnam quo voluptatum quaerat nemo maiores molestiae soluta blanditiis amet in omnis harum, est! Consequatur, nesciunt.
-cta:
-  text: See Overview
-  link: "{{site.baseurl}}"
+
+sharing:
+  - id: facebook
+    link: https://www.facebook.com/sharer.php?u={{site.url}}{{site.baseurl}}
+  - id: twitter
+    link: https://twitter.com/share?url={{site.url}}{{site.baseurl}}
+  - id: whatsapp
+    link: https://api.whatsapp.com/send?text={{site.url}}{{site.baseurl}}
+  - id: email
+    link: mailto:?subject=We can win a staycation!&body=I've found a competition that I think you will love! Check out this site {{site.url}}{{site.baseurl}}
+
+
 ---
+
+
+<div class="container">
+  <div class="width width--lg vpad--xxl text--center">
+    <h1 class="h h--xl h--display">{{page.title}}</h1>
+    <div class="space--xxs"></div>
+    <p class="p--xxxl text--bold">Increase your chances of winning by sharing this competition!</p>
+    <div class="vpad--md">
+      <div class="row row--gutters-sm">
+        {% for sharing in page.sharing %}
+        <div class="col col--constant-3">
+          <div class="img img--1-1 sharing sharing--{{sharing.id}}">
+            <a target="_blank" href="{{sharing.link | liquify}}" class="img__link"></a>
+            <div class="img__content">
+              <div class="sharing__icon" style="background-image: url({{site.img}}/icons/s-{{sharing.id}}.svg);"></div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="p--xxl">Continue dreaming with our collection of UK escapes</p>
+    <div class="space--sm"></div>
+    <a href="{{locale.core-site-link}}" class="btn btn--orange">View current sales</a>
+  </div>
+</div>
