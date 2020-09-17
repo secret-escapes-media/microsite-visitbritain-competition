@@ -15,5 +15,20 @@ intro: Can’t wait for your next escape? Find your perfect staycation below wit
 
 offers:
   sheet: "UK"
-  limit: 10
+  limit: 60
 ---
+
+
+<div class="bg--white vpad--xxl">
+  <div class="container container--xxl text--center">
+    <p class="p--xxxl">{{page.intro}}</p>
+  </div>
+</div>
+<div class="bg--grey-lightest">
+  {% include offer/all-offers-dynamic.html sheet=page.offers.sheet limit=page.offers.limit %}
+
+  <div class="text--center">
+    <a href="https://www.secretescapes.com/search/search?query=uk" target="_blank" class="btn btn--xl">View more UK sales</a>
+    <div class="space--xxl"></div>
+  </div>
+</div>

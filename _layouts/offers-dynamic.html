@@ -5,14 +5,7 @@ layout: default
 {% include nav/header.html %}
 {% include page/banner.html %}
 
-<div class="bg--white vpad--xxl">
-  <div class="container container--xxl text--center">
-    <p class="p--xxxl">{{page.intro}}</p>
-  </div>
-</div>
-<div class="bg--grey-lightest">
-  {% include offer/all-offers-dynamic.html sheet=page.offers.sheet limit=page.offers.limit %}
-</div>
+{{content}}
 
 {% include page/promo-offers.html %}
 {% include nav/footer.html %}

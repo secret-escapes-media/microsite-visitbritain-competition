@@ -69,7 +69,7 @@ $(offerSections).each(function(){
           htmlTags = $(htmlTags).append("<div class='offer__tag offer__tag-customisable'>Customisable</div>");
         }
         if (saleTags.indexOf("flights") >= 0){
-          htmlTags = $(htmlTags).append("<div class='offer__tag offer__tag-flights'>Flights</div>");
+          htmlTags = $(htmlTags).append("<div class='offer__tag offer__tag-flights'>Flights included</div>");
         }
 
         if(saleDiscount > 0){
