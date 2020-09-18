@@ -1,6 +1,16 @@
 // these are the core typeface families
 
+@font-face {
+  font-family: "Better Times Alt";
+  src: local("Better Times Alt"), local("BetterTimesAlt"),
+    url("../fonts/BetterTimesAlt.woff2") format("woff2"),
+    url("../fonts/BetterTimesAlt.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 $sans:    'Source Sans Pro', 'Helvetica Neue', sans-serif;
 $serif:   'Source Serif Pro', Georgia, serif;
 $title:   'Source Sans Pro', 'Helvetica Neue', sans-serif;
-$display: 'Caveat Brush', 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$display: 'Better Times Alt', 'Source Sans Pro', 'Helvetica Neue', sans-serif;
