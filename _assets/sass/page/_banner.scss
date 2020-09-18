@@ -89,12 +89,12 @@
     }
     &-overview {
       background-image: url('../img/pages/overview/title.svg');
-      &:before { padding-top: 32.5%; }
+      &:before { padding-top: 36%; }
     }
     &-offers {
       background-image: url('../img/pages/offers/title.svg');
       max-width: $lg;
-      &:before { padding-top: 20%; }
+      &:before { padding-top: 30%; }
     }
   }
 }
