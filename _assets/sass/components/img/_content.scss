@@ -35,8 +35,10 @@
     z-index: $z-content;
     background-color: rgba($black,.4);
     @include transition;
+    &--light { background-color: rgba($black,.16); }
   }
   &:hover &__overlay { background-color: rgba($black,.6); }
+  &:hover &__overlay--light { background-color: rgba($black,.33); }
   &--hover {
     transform: scale(1);
     &:hover { transform: scale(1.025); }
