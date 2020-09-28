@@ -12,8 +12,8 @@ banner:
     </div>
 
 intro: >
-  <div class="h h--lg h--display text--bold text--upper">Win one of six irresistible staycations!</div>
-  <p class="p--xxl">For the chance of winning an escape from the day-to-day, be it the wild outdoors or the city lights, enter below.</p>
+  <div class="h h--sm text--bold">Win one of five irresistible breaks!</div>
+  <p class="p--xxl">For the chance of winning an escape from the everyday, be it the wild outdoors or the city lights, enter below. </p>
   <p class="p--xxl">What’s more, you’ll also receive a pair of luxurious Hunter welly boots for your getaway, so no matter the weather, you can explore in style...</p>
 
 
@@ -22,37 +22,31 @@ prizes:
 
   - id: england-coast
     location: North Cornwall, England
-    title: Stay at Watergate Bay Hotel in North Cornwall
+    title: An escape to Watergate Bay Hotel in North Cornwall
     description: Head for the elements with this unparalleled coastal hideaway...
     hunter: Hunter Original Tall Wellington Boots
 
   - id: england-country
     location: Winchester, England
-    title: Stay at Lainston House in Winchester
+    title: An escape to Lainston House in Winchester
     description: Head for the country and relish in the evocative charms of this classic country pile...
     hunter: Hunter Balmoral Adjustable Wellington Boots
 
   - id: england-city
     location: Bath, England
-    title: Stay at boutique Bath hotel, The Bird
+    title: An escape to boutique Bath hotel, The Bird
     description: Boutique dreams await at this effortlessly-chic city pad in the heart of regal Bath...
     hunter: Hunter Original Chelsea Boots
 
   - id: scotland
     location: Scottish Highlands
-    title: Stay at Glencoe House in the Scottish Highlands
+    title: An escape to Glencoe House in the Scottish Highlands
     description: Nestled in a deep, forested valley, this stately Scottish escape makes for perfect isolation...
     hunter: Hunter Balmoral Full Zip
 
-  - id: wales
-    location: Wales
-    title: Stay at the Coed-Y Mwstwr Hotel
-    description: Between coast and country, delight at the grandeur of this gorgeous Welsh getaway...
-    hunter: Hunter Original Sherpa Boots
-
   - id: northern-ireland
     location: Belfast, Northern Ireland
-    title: Stay at The Merchant in Belfast
+    title: An escape to The Merchant in Belfast
     description: A boutique - and frankly, breathtaking - Belfast stay in the heart of Northern Ireland’s most enthralling city...
     hunter: Hunter Original Play Short Wellington Boots
 
@@ -79,8 +73,6 @@ competition-form:
           value: bath-england
         - id: prize-scotland
           value: scotland
-        - id: prize-wales
-          value: wales
         - id: prize-northern-ireland
           value: northern-ireland
 
@@ -164,7 +156,7 @@ competition-form:
       label:
       options:
         - id: opt-in-partner-true
-          label: 'Please tick here if you would like to receive emails from Visit Britain'
+          label: 'Please tick here if you would to receive the fortnightly VisitBritain/VisitEngland newsletter'
           value: 'yes'
 
     - id: opt-in-secret-escapes
@@ -225,7 +217,7 @@ competition-form-masks:
       <div class="text--smallcaps p--xl">Prize option {{forloop.index}}</div>
       <div class="space--xs"></div>
       <div class="h h--xs text--bold">{{prize.title}}</div>
-      <p class="p--lg">{{prize.description}}</p>
+      <p class="p--xl">{{prize.description}}</p>
       <div class="space--sm"></div>
       <div class="hunter">
         <div class="row row--valign-center row--no-gutters">

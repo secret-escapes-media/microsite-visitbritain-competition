@@ -14,7 +14,9 @@ $footer-nav-color: $grey;
 }
 
 .site-footer {
-  &__links {
+  ul {
+    list-style: none;
     padding-top: $s-2;
+    & li:before { content: none; }
   }
 }

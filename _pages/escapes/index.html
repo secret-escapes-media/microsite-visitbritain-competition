@@ -1,6 +1,6 @@
 ---
 layout: offers-dynamic
-id: offers
+id: escapes
 title: Escapes
 nav: true
 nav-order: 3
@@ -8,10 +8,12 @@ nav-order: 3
 banner:
   content: >
     <div class="container text--center">
-      <div class="banner__title banner__title-offers"></div>
+      <div class="banner__title banner__title-escapes"></div>
     </div>
 
-intro: Can’t wait for your next escape? Find your perfect staycation below with these handpicked getaways
+intro:  >
+  <p class="p--xxl">Escape the everyday with our handpicked selection of gorgeous hotels. From the Highlands down to Kent, find your next autumnal escape here.</p>
+  <p class="p--xxl">Read our <a href="https://mp.secretescapes.com/uk/2020/safe-stay-policy/" target="_blank" class="text--link">SafeStay policy</a> to find out what we are doing to ensure your break is as safe as possible.</p>
 
 offers:
   sheet: "UK"
@@ -21,7 +23,7 @@ offers:
 
 <div class="bg--white vpad--xxl">
   <div class="container container--xxl text--center">
-    <p class="p--xxxl">{{page.intro}}</p>
+    {{page.intro}}
   </div>
 </div>
 <div class="bg--grey-lightest">
