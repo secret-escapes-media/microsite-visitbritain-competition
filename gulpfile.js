@@ -27,7 +27,7 @@ function browserSyncServe() {
     server: {
       baseDir: '_site/',
       routes: {
-        '/uk/2020/visitbritain': '_site/'
+        '/uk/2020/visitbritain/competition': '_site/'
       }
     }
   });
